@@ -1,0 +1,104 @@
+body, html {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.List-Product {
+    width: 100vw;
+    min-height: 100vh;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.listproduct-container {
+    width: 95vw;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    margin: 40px auto 0 auto;
+    overflow-x: auto;
+    padding: 32px 0;
+}
+
+.listproduct-header,
+.listproduct-row {
+    display: grid;
+    grid-template-columns: 100px 2fr 1fr 1fr 1fr 60px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+.listproduct-header {
+    font-weight: 600;
+    font-size: 16px;
+    color: #222;
+    border-bottom: 2px solid #eee;
+    padding: 16px 0 12px 0;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.listproduct-row {
+    font-weight: 500;
+    font-size: 15px;
+    color: #444;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    min-height: 80px;
+    transition: background 0.2s;
+}
+
+.listproduct-row:hover {
+    background: #f9f9f9;
+}
+
+.listproduct-product-icon {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f0f0f0;
+}
+
+.listproduct-remove-icon {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    margin: auto;
+    transition: filter 0.2s;
+}
+.listproduct-remove-icon:hover {
+    filter: brightness(0.7);
+}
+
+.listproduct-allproducts {
+    max-height: 70vh;
+    overflow-y: auto;
+    background: #fff;
+}
+
+@media (max-width: 900px) {
+    .listproduct-container {
+        padding: 8px 0;
+    }
+    .listproduct-header,
+    .listproduct-row {
+        grid-template-columns: 50px 1.5fr 1fr 1fr 1fr 40px;
+        font-size: 13px;
+    }
+    .listproduct-product-icon {
+        width: 40px;
+        height: 40px;
+    }
+}

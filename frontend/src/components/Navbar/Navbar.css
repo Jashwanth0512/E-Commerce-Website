@@ -1,0 +1,335 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    position: relative;
+    background: white;
+    z-index: 999;
+}
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.nav-logo p{
+    color: #171717;
+    font-size: 40px;
+    font-weight: 800;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+.nav-menu hr{
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: #ff4141;
+}
+.nav-login-cart{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    position: relative;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-info span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.nav-login-cart button {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    background: #ff4141;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-login-cart button:hover {
+    background: #ff2c2c;
+}
+
+.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background: red;
+    color: white;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.nav-dropdown-container {
+    display: none;
+}
+
+.nav-dropdown {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+@media(max-width:1280px){
+    .navbar{
+        padding: 12px 50px;
+    }
+    .nav-logo img{
+        width: 40px;
+    }
+    .nav-logo p{
+        font-size: 25px;
+    }
+    .nav-menu{
+        gap: 30px;
+        font-size: 16px;
+    }
+    .nav-login-cart{
+        gap: 30px;
+    }
+    .nav-login-cart button{
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .nav-cart-count{
+        margin-left: -40px;
+        font-size: 12px;
+    }
+}
+@media(max-width:1024px){
+    .navbar{
+        padding: 12px 30px;
+    }
+    .nav-menu{
+        gap: 25px;
+        font-size: 14px;
+    }
+    .nav-login-cart button{
+        width: 80px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .nav-login-cart img{
+        width: 30px;
+    }
+    .nav-cart-count{
+        width: 18px;
+        height: 18px;
+    }
+}
+@media(max-width:800px){
+    .navbar{
+        padding: 10px 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav-dropdown-container {
+        display: block;
+        order: 2;
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+    }
+    
+    .nav-dropdown {
+        display: block;
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .nav-dropdown.open {
+        transform: rotate(90deg);
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-menu.nav-menu-visible {
+        display: flex;
+        padding: 20px 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu li a {
+        font-size: 18px;
+        color: #171717;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-login-cart {
+        gap: 20px;
+        order: 3;
+    }
+
+    .nav-login-cart button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .nav-logo p {
+        font-size: 22px;
+    }
+}
+
+@media(max-width:500px){
+    .navbar{
+        padding: 8px 15px;
+    }
+    
+    .nav-logo{
+        transform: scale(0.8);
+    }
+
+    .nav-menu{
+        top: 60px;
+    }
+
+    .nav-login-cart button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .nav-cart-count {
+        width: 16px;
+        height: 16px;
+        font-size: 10px;
+        margin-top: -25px;
+        margin-left: -35px;
+    }
+
+    .user-info span {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:400px){
+    .navbar{
+        padding: 8px 10px;
+    }
+    
+    .nav-logo img {
+        width: 30px;
+    }
+    
+    .nav-logo p {
+        font-size: 18px;
+    }
+
+    .nav-login-cart {
+        gap: 10px;
+    }
+
+    .nav-login-cart button {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    .nav-cart-count {
+        margin-left: -25px;
+    }
+}
+
+/* Add CSS-based hamburger menu as fallback */
+@media(max-width:800px) {
+    .nav-dropdown-container {
+        width: 30px;
+        height: 24px;
+        position: relative;
+        margin: 0 15px;
+    }
+
+    /* Create hamburger menu with CSS if image fails to load */
+    .nav-dropdown:not([src]) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .nav-dropdown:not([src])::before,
+    .nav-dropdown:not([src])::after,
+    .nav-dropdown:not([src]) {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #171717;
+        transition: all 0.3s ease;
+    }
+
+    .nav-dropdown:not([src]).open::before {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .nav-dropdown:not([src]).open::after {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+
+    .nav-dropdown:not([src]).open {
+        background: transparent;
+    }
+}
